@@ -1,4 +1,4 @@
-# philosophy-app
+# philosophy-app :cloud:
 
 - A simple Philosophy resource for finding information on Philosophers, ideas, quotes, etc.
 
