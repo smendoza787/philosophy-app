@@ -11,7 +11,7 @@ Until I can find a 'single-command' solution for starting a Postgres connection,
   - run `rails s -p 3001` to start the API server on port 3001
 
 3. **Third Terminal**
-  - ```
-      cd client
-      npm start
-    ```
+  ```
+    cd client
+    npm start
+  ```
