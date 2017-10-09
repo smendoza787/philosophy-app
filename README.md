@@ -1,5 +1,9 @@
 # philosophy-app
 
+- A simple Philosophy resource for finding information on Philosophers, ideas, quotes, etc.
+
+- Built with Ruby on Rails and React
+
 ## Instructions For Running
 
 Until I can find a 'single-command' solution for starting a Postgres connection, rails server and react-dev-server in parallel, you have to run these in 3 separate terminals. :/
