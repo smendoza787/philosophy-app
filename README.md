@@ -6,16 +6,14 @@
 
 ## Instructions For Running
 
-Until I can find a 'single-command' solution for starting a Postgres connection, rails server and react-dev-server in parallel, you have to run these in 3 separate terminals. :/
+To install dependencies for Rails API run:
 
-1. **First Terminal**
-  - make sure `postgres` is installed and run `postgres`
+```bundle install```
 
-2. **Second Terminal**
-  - run `rails s -p 3001` to start the API server on port 3001
+To install dependencies for React app inside `client` run:
 
-3. **Third Terminal**
-  ```
-    cd client
-    npm start
-  ```
+```cd client && npm install```
+
+Make sure to `cd ..` back into the root directory, then run:
+
+```foreman start``
