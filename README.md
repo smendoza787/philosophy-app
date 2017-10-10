@@ -6,20 +6,20 @@
 
 ## Instructions For Running
 
-To install dependencies for Rails API run:
+- To install dependencies for Rails API run:
 
 ```
   bundle install
 ```
 
-To install dependencies for React app inside `client` run:
+- To install dependencies for React app inside `client` run:
 
 ```
   cd client && npm install
 ```
 
-Make sure to `cd ..` back into the root directory, then run:
+- Make sure to `cd ..` back into the root directory, then run:
 
 ```
   foreman start
-``
+```
