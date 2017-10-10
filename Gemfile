@@ -11,6 +11,9 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'active_model_serializers'
 
+# Use foreman gem for Procfile based applications
+gem 'foreman'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
