@@ -13,6 +13,24 @@ class App extends Component {
       .then(resp => resp.json())
       .then(phils => this.setState({ philosophers: phils }))
   }
+
+  addPhilosopher(philObj) {
+    console.log("POST REQUEEEST: ", JSON.stringify({ philosopher: philObj }))
+    fetch("http://localhost:3001/api/philosophers", {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ philosopher: philObj })
+    }).then(resp => resp.json())
+      .then(phil => this.setState({ philosophers: this.state.philosophers.concat(phil) }))
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    let form = document.forms.philosopherForm;
+    this.addPhilosopher({ name: form.name.value, age: 76, birthplace: form.birthplace.value });
+    form.name.value = "";
+    form.birthplace.value = "";
+  }
  
   render() {
     let renderPhilosophers = this.state.philosophers.map(phil => 
@@ -37,6 +55,11 @@ class App extends Component {
           <div>
             {renderPhilosophers}
           </div>
+          <form name="philosopherForm">
+            <input type="text" name="name" placeholder="Name" />
+            <input type="text" name="birthplace" placeholder="Birthplace" />
+            <button onClick={(event) => this.handleSubmit(event)}>Add Philosopher</button>
+          </form>
         </div>
       );
     }
